@@ -17,7 +17,7 @@ class MyController extends Controller
             'roomId' => 'string',
             'title' => 'required|string',
             'message' => 'required|string',
-            'roomId' => 'string',
+            //'roomId' => 'string',
         ]);
 
         $APP_KEY = $request->appKey;
