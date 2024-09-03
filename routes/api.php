@@ -14,3 +14,7 @@ Route::post('/test', function (Request $request) {
     $payload = json_decode($request->payload, true);
     return response()->json(['data' => $payload]);
 });
+
+Route::get('hello_ami_aloush', function () {
+    return response()->json(['message' => 'the master of hosting and publishing! ahla ami aloush']);
+});
