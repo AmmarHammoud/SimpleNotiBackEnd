@@ -7,6 +7,10 @@ use App\Http\Controllers\MyController;
 Route::post('notiKeys', [MyController::class, "sendNotificationWithDifferentKeys"]);
 
 
-Route::get('/hello', function () {
-    return response()->json(['message' => 'HELLO']);
+Route::post('/test', function (Request $request) {
+    $request->validate([
+        'payload' => 'string',
+    ]);
+    $payload = json_decode($request->payload, true);
+    return response()->json(['data' => $payload]);
 });
